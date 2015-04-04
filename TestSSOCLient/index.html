@@ -14,7 +14,7 @@
         function start() {
             gapi.load('auth2', function () {
                 auth2 = gapi.auth2.init({
-                    client_id: '464827086629-mbs2pdk5o9sukad7vqolamed6pvvd78v.apps.googleusercontent.com',
+                    client_id: ,
                     // Scopes to request in addition to 'profile' and 'email'
                     //scope: 'additional_scope'
                 });
@@ -29,7 +29,7 @@
     <script>
         $('#signinButton').click(function () {
             // signInCallback defined in step 7.
-            auth2.grantOfflineAccess({ 'redirect_uri': 'postmessage' }).then(signInCallback);
+            auth2.grantOfflineAccess().then(signInCallback);
         });
     </script>
     <div id="result"></div>
